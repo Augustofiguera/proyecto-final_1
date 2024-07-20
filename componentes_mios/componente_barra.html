@@ -1,0 +1,183 @@
+<div id="div" class="fixed w-screen"></div>
+    <!-- contenido principal de la pagina  -->
+    <div class="flex flex-row pt-15 h-screen">
+        <!-- barra de navegacion lateral -->
+        <div id="navLateral" class="w-60 flex h-screen"></div>
+        <!-- contenido de la pagina  -->
+        <section class=" bg-gray-800 flex flex-col w-screen h-screen pt-16">
+          <div class="h-30 justify-start p-4">
+            <h1 class="text-indigo-300 text-xl font-bold">Bienvenido de vuelta!!</h1>
+          </div>
+          <div>
+
+          </div>
+          
+        </section>
+        
+    </div>
+    
+    <script type="module" src="../components/inicio.js"></script>
+    <script type="module" src="../components/navLateral.js"></script>
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex h-screen bg-gray-200">
+
+  <!-- Barra superior -->
+  <nav class="bg-gray-900 p-4 flex items-center justify-between w-full fixed top-0 z-20">
+    <div class="flex items-center">
+      <button id="menuButton" class="md:hidden text-white text-2xl mr-4">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1 class="text-white font-bold text-xl">SALUD 360</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span class="font-bold text-white">Bienvenidos</span>
+      <i class="fas fa-user-circle text-white text-2xl"></i>
+    </div>
+  </nav>
+
+  <!-- Barra lateral para pantallas grandes -->
+  <aside class="bg-gray-800 text-white w-64 min-h-screen p-4 pt-16 hidden md:block">
+    <nav>
+      <ul class="space-y-2">
+        <li>
+          <a href="/principal" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/addProfile" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Agregar Personal
+          </a>
+        </li>
+        <li>
+          <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Lista de Personales
+          </a>
+        </li>
+        <li>
+          <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Planillas de Excel
+          </a>
+        </li>
+        <li>
+          <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Perfil
+          </a>
+        </li>
+        <li>
+          <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+            <i class="fas fa-chevron-right mr-2 text-xs"></i>
+            Configuración
+          </a>
+        </li>
+        <!-- Agrega más enlaces para la navegación lateral -->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Barra lateral para pantallas pequeñas -->
+  <div id="mobileMenu" class="fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden md:hidden">
+    <div class="flex flex-col w-64 bg-gray-800 text-white p-4">
+      <button id="closeButton" class="text-white mb-4">
+        <i class="fas fa-times"></i> Cerrar
+      </button>
+      <nav>
+        <ul class="space-y-2">
+          <li>
+            <a href="/principal" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Inicio
+            </a>
+          </li>
+          <li>
+            <a href="/addProfile" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Agregar Personal
+            </a>
+          </li>
+          <li>
+            <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Lista de Personales
+            </a>
+          </li>
+          <li>
+            <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Planillas de Excel
+            </a>
+          </li>
+          <li>
+            <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Perfil
+            </a>
+          </li>
+          <li>
+            <a href="#" class="p-2 hover:bg-gray-700 flex items-center">
+              <i class="fas fa-chevron-right mr-2 text-xs"></i>
+              Configuración
+            </a>
+          </li>
+          <!-- Agrega más enlaces para la navegación lateral -->
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="flex-1 p-4 pt-20">
+    <h1 class="text-3xl font-bold">Contenido Principal</h1>
+    <p class="mt-4">Este es el área de contenido principal.</p>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeButton = document.getElementById('closeButton');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    closeButton.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!-- <form id="searchForm" class="mb-4">
+                  <div class="mb-2">
+                      <label for="fullnameSearch" class="block text-gray-700">Buscar por Nombre:</label>
+                      <input type="text" id="fullnameSearch" class="w-full p-2 border border-gray-300 rounded">
+                  </div>
+                  <div class="mb-2">
+                      <label for="cedulaSearch" class="block text-gray-700">Buscar por Cédula:</label>
+                      <input type="text" id="cedulaSearch" class="w-full p-2 border border-gray-300 rounded">
+                  </div>
+                  <button type="submit" class="bg-indigo-600 text-white p-2 rounded">Buscar</button>
+              </form>
+              <div id="tablesContainer"></div> -->

@@ -9,7 +9,12 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    personal: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'personal'
+    }
 });
+
 
 
 userSchema.set('toJSON', {

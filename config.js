@@ -1,5 +1,9 @@
 const PAGE_URL = process.env.NODE_ENV === 'production'
-  ? 'placeholder' // Cambia 'placeholder' por la URL de tu sitio en producción
+  ? 'placeholder' 
   : 'http://localhost:3003';
 
-module.exports = { PAGE_URL };
+  const MONGO_URI = process.env.NODE_ENV === 'production'
+  ? process.env.MONGO_URL_PROD
+  : process.env.MONGO_URL_TEST
+
+module.exports = { PAGE_URL, MONGO_URI };

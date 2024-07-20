@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <title>Hospital General de los Valles del Tuy Simón Bolívar</title>
+</head>
+<body class="bg-gray-600">
+  <nav class="bg-black opacity-90 p-4 flex items-center justify-between w-full fixed top-0 z-20">
+    <div class="flex items-center">
+      <button id="menuButton" class="text-white text-2xl mr-4">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1 class="text-white font-bold text-xl">Departamento de Enfermería</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      
+      <span class="font-bold text-white">Bienvenidos</span>
+      <i class="fas fa-user-circle text-white text-2xl"></i>
+    </div>
+  </nav>
+
+  <a href="/login" class="w-32 h-8 rounded-xl cursor-pointer p-2 mt-24 bg-indigo-700 hover:bg-indigo-800 flex items-center">
+    <i class="fas fa-chevron-right mr-2 text-xs"></i>
+    inicio de seccion
+  </a>
+  <a href="/registro" class=" w-32 h-8 rounded-xl cursor-pointer bg-indigo-700 hover:bg-indigo-800 flex items-center">
+    <i class="fas fa-chevron-right mr-2 text-xs"></i>
+    registro
+  </a>
+  <!-- Banner Principal -->
+  <div class="w-screen h-screen overflow-hidden relative before:block before:absolute before:bg-black before:h-full before:w-full before:top-0 before:left-0 before:z-10 before:opacity-30">
+    <div class="relative z-20 max-w-screen-lg mx-auto grid grid-cols-12 h-full items-center">
+      <div class="col-span-6">
+        <span class="uppercase text-white text-xs font-bold mb-2 block">Hospital General</span>
+        <h1 class="text-white font-extrabold text-5xl mb-8">Hospital General de los Valles del Tuy Simón Bolívar</h1>
+        <p class="text-stone-100 text-base">
+          Brindando atención médica integral y de calidad a nuestra comunidad.
+        </p>
+        <button class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Conócenos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre Nosotros -->
+  <div class="bg-[#f7d0b6] py-20">
+    <div class="max-w-screen-lg mx-auto flex justify-between items-center">
+      <div class="max-w-xl">
+        <h2 class="font-black text-sky-950 text-3xl mb-4">Comprometidos con tu salud</h2>
+        <p class="text-base text-sky-950">El Hospital General de los Valles del Tuy Simón Bolívar se dedica a ofrecer servicios de salud integrales y de alta calidad a todos los miembros de nuestra comunidad. Nuestro equipo de profesionales médicos está comprometido con el bienestar y la recuperación de nuestros pacientes.</p>
+      </div>
+      <button class="text-sky-950 uppercase py-3 text-base px-10 border border-sky-950 hover:bg-sky-950 hover:bg-opacity-10">Más Información</button>
+    </div>
+  </div>
+
+  <!-- Servicios -->
+  <div class="py-12 relative overflow-hidden bg-gray-950">
+    <div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+      <div class="w-full flex flex-col items-end pr-16">
+        <h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-right mb-12 mt-10">Nuestros Servicios</h2>
+        <div class="h-full mt-auto overflow-hidden relative">
+          <img src="https://www.bannerhealth.com/-/media/images/project/test-facilities/bhmc/bhmc_hero_1200x500.ashx?h=500&la=en&w=1200&hash=A7FC0FC63E3E9B9FA30D4CCCB5AA67C3" class="h-full w-full object-cover" alt="Servicios Médicos">
+        </div>
+      </div>
+
+      <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-sky-950 before:top-0 before:left-0">
+        <div class="relative z-20 pl-12">
+          <h2 class="text-[#f7d0b6] font-black text-5xl leading-snug mb-10">Atención de Calidad</h2>
+          <p class="text-white text-sm">
+            Ofrecemos una amplia gama de especialidades médicas, modernas instalaciones y tecnología avanzada para asegurar la mejor atención posible.
+          </p>
+          <button class="mt-8 text-white uppercase py-3 text-sm px-10 border border-white hover:bg-white hover:bg-opacity-10">Conoce más</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contáctanos -->
+  <div class="py-4 relative overflow-hidden bg-gray-500">
+    <div class="grid grid-cols-2 max-w-screen-lg mx-auto">
+      <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-[#f7d0b6] before:top-0 before:right-0">
+        <div class="relative z-20 pl-12">
+          <h2 class="text-sky-950 font-black text-5xl leading-snug mb-10">Contáctanos</h2>
+          <p class="text-sky-950 text-sm">
+            Para más información o para programar una cita, por favor contáctanos a través de:
+          </p>
+          <ul class="list-disc list-inside text-sky-950">
+            <li>Teléfono: 04141638678</li>
+            <li>Email: augustofigura452@gmail.com</li>
+            <li>Dirección: Avenida Principal, Valles del Tuy, Venezuela</li>
+          </ul>
+          <button class="mt-8 text-sky-950 uppercase py-3 text-sm px-10 border border-sky-950 hover:bg-white hover:bg-opacity-10">Escríbenos</button>
+        </div>
+      </div>
+      <div class="w-full flex flex-col pl-16">
+        <h2 class="text-[#64618C] font-bold text-2xl max-w-xs text-left mb-12 mt-10">Visítanos</h2>
+        <div class="h-full mt-auto overflow-hidden relative">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Bellevue_Hospital_Center_jeh.jpg/1200px-Bellevue_Hospital_Center_jeh.jpg" class="h-full w-full object-cover" alt="Hospital">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+  

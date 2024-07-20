@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-400 text-white ">
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <div id="div" class="fixed w-screen"></div>
+    <!-- contenido principal de la pagina  -->
+    <div class="flex flex-col items-center pt-16 h-screen">
+        <!-- barra de navegacion lateral -->
+        <div id="navLateral" class=" flex h-screen"></div>
+        <!-- contenido de la pagina  -->
+        <section class=" bg-gray-400 flex flex-col w-9/12 h-screen pt-16">
+          <div class="h-30 justify-start p-4">
+            <h1 class="text-indigo-700 text-2xl font-bold p-5">Personal</h1>
+          </div>
+          <div class="h-80">
+            <div class="" id="abrir">
+              <h2 class="justify-center pl-8 font-medium">
+                  Agregar a la lista
+              </h2>
+              <button id="close" class="bg-indigo-700 hover:bg-indigo-900 text-white font-bold p-3 rounded-xl">Cerrar Seccion</button>
+              <button class="font-bold bg-indigo-700 p-4 rounded-lg m-4" id="boton_agregar">Agregar una persona</button>
+
+            </div>
+            <form id="form" class="flex flex-col items-center justify-center  w-full p-8 hidden bg-black opacity-80 rounded-lg">
+              <div class="grid grid-cols-2 gap-4">
+                  <div>
+                      <label for="name" class="block text-gray-100">Nombre</label>
+                      <input id="fullname" class="text-black w-full p-2 rounded" type="text" placeholder="Nombre">
+                  </div>
+                  <div>
+                      <label for="cedula" class="block text-gray-100">Cédula</label>
+                      <input id="cedula" class="text-black w-full p-2 rounded" type="text" placeholder="Cédula">
+                  </div>
+                  <div>
+                      <label for="sereal_carnetpatria" class="block text-gray-100">Serial Carnet Patria</label>
+                      <input id="sereal_carnetpatria" class="text-black w-full p-2 rounded" type="text" placeholder="Serial Carnet Patria">
+                  </div>
+                  <div>
+                      <label for="fecha_de_ingreso" class="block text-gray-100">Fecha de Ingreso</label>
+                      <input id="fecha_de_ingreso" class="text-black w-full p-2 rounded" type="text" placeholder="Fecha de Ingreso">
+                  </div>
+                  <div>
+                      <label for="antiguedad" class="block text-gray-100">Antigüedad</label>
+                      <input id="antiguedad" class="text-black w-full p-2 rounded" type="text" placeholder="Antigüedad">
+                  </div>
+                  <div>
+                      <label for="tipo_del_personal" class="block text-gray-100">Tipo del Personal</label>
+                      <input id="tipo_del_personal" class="text-black w-full p-2 rounded" type="text" placeholder="Tipo del Personal">
+                  </div>
+                  <div>
+                      <label for="codigo" class="block text-gray-100">Código</label>
+                      <input id="codigo" class="text-black w-full p-2 rounded" type="text" placeholder="Código">
+                  </div>
+                  <div>
+                      <label for="cargo_nominal" class="block text-gray-100">Cargo Nominal</label>
+                      <input id="cargo_nominal" class="text-black w-full p-2 rounded" type="text" placeholder="Cargo Nominal">
+                  </div>
+                  <div>
+                      <label for="funciones" class="block text-gray-100">Funciones</label>
+                      <input id="funciones" class="text-black w-full p-2 rounded" type="text" placeholder="Funciones">
+                  </div>
+                  <div>
+                      <label for="turno" class="block text-gray-100">Turno</label>
+                      <input id="turno" class="text-black w-full p-2 rounded" type="text" placeholder="Turno">
+                  </div>
+                  <div>
+                      <label for="fecha_de_nacimiento" class="block text-gray-100">Fecha de Nacimiento</label>
+                      <input id="fecha_de_nacimiento" class="text-black w-full p-2 rounded" type="text" placeholder="Fecha de Nacimiento">
+                  </div>
+                  <div>
+                      <label for="edad" class="block text-gray-100">Edad</label>
+                      <input id="edad" class="text-black w-full p-2 rounded" type="text" placeholder="Edad">
+                  </div>
+                  <div>
+                      <label for="estadoCivil" class="block text-gray-100">Estado Civil</label>
+                      <input id="estadoCivil" class="text-black w-full p-2 rounded" type="text" placeholder="Estado Civil">
+                  </div>
+                  <div>
+                      <label for="direccion" class="block text-gray-100">Dirección</label>
+                      <input id="direccion" class="text-black w-full p-2 rounded" type="text" placeholder="Dirección">
+                  </div>
+                  <div>
+                      <label for="Municipio" class="block text-gray-100">Municipio</label>
+                      <input id="municipio" class="text-black w-full p-2 rounded" type="text" placeholder="Municipio">
+                  </div>
+                  <div>
+                      <label for="email" class="block text-gray-100">Email</label>
+                      <input id="email" class="text-black w-full p-2 rounded" type="email" placeholder="Email">
+                  </div>
+                  <div>
+                      <label for="telefono" class="block text-gray-100">Teléfono</label>
+                      <input id="telefono" class="text-black w-full p-2 rounded" type="text" placeholder="Teléfono">
+                  </div>
+                  <div>
+                      <label for="numeroDeHijos" class="block text-gray-100">Número de Hijos</label>
+                      <input id="numeroDeHijos" class="text-black w-full p-2 rounded" type="text" placeholder="Número de Hijos">
+                  </div>
+                  <div>
+                      <label for="especialidad" class="block text-gray-100">Especialidad</label>
+                      <input id="especialidad" class="text-black w-full p-2 rounded" type="text" placeholder="Especialidad">
+                  </div>
+                  
+              </div>
+              <button class="shadow-lg transition duration-250 ease-in-out font-bold uppercase block w-full p-4 text-lg rounded-xl bg-indigo-600 hover:bg-indigo-700 focus:outline-none disabled:opacity-60 disabled:cursor-not-allowed">Agregar</button>
+          </form>
+
+          
+          <div class="font-medium bg-white text-gray-950 rounded-lg">
+          <form id="formBuscar">
+            <p class="p-2 text-xl font-bold text-indigo-600">Buscar una persona</p>
+            <input type="text" id="Buscar" class="flex mt-3 bg-slate-200 text-black w-56 p-2 rounded justify-center" placeholder="Nombre">
+            <input type="text" id="cedulaBuscar" class="flex mt-3 bg-slate-200 text-black w-56 p-2 rounded justify-center" placeholder="Cédula">
+            <button type="submit" class="mt-3 bg-indigo-700 text-white p-2 rounded">Buscar</button>
+          </form>
+              <div id="contenedorDeBusqueda" class="font-medium bg-white text-gray-950 rounded-lg w-auto overflow-x-auto">
+
+            </div>
+        </div>
+        
+        <!-- component -->
+<section  class="flex justify-center w-full h-auto container mx-auto p-6 font-mono ">
+  <div class="flex w-full  mb-8 overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-x-auto ">
+      <table id="" class="w-full">
+        <thead>
+          <tr class="text-md font-bold tracking-wide text-left text-gray-950 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3 text-indigo-700">Opciones</th>
+            <th class="px-4 py-3">Nombre</th>
+            <th class="px-4 py-3 text-indigo-700 ">cedula</th>
+            <th class="px-4 py-3">carnet de la patria</th>
+            <th class="px-4 py-3 text-indigo-700">fecha de ingreso</th>
+            <th class="px-4 py-3 ">antiguedad</th>
+            <th class="px-4 py-3">tipo de personal</th>
+            <th class="px-4 py-3 text-indigo-700">codigo</th>
+            <th class="px-4 py-3">cargo nominal</th>
+            <th class="px-4 py-3 text-indigo-700">funciones</th>
+            <th class="px-4 py-3">turno</th>
+            <th class="px-4 py-3 text-indigo-700">fecha de Nacimiento</th>
+            <th class="px-4 py-3">Edad</th>
+            <th class="px-4 py-3 text-indigo-700">estado civil</th>
+            <th class="px-4 py-3">direccion</th>
+            <th class="px-4 py-3 text-indigo-700">Municipio</th>
+            <th class="px-4 py-3">Email</th>
+            <th class="px-4 py-3 text-indigo-700">telefono</th>
+            <th class="px-4 py-3">numero de hijos</th>
+            <th class="px-4 py-3 text-indigo-700">Especialidad</th>
+          </tr>
+        </thead>
+        <div id="lista">
+          <tbody id="list" class= "font-medium bg-white text-gray-950">
+              
+          </tbody>
+        </div>
+      </table>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</section>
+          </div>
+        </section>
+    </div>
+    <script type="module" src="../components/inicio.js"></script>
+    <script type="module" src="../components/navLateral.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- component -->
